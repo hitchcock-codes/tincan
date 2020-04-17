@@ -22,11 +22,32 @@
 | System        | Typing | The system can detect when a client is starting/stopping typing                                 |
 |               | Status | The system provides status about a user's availability                                          |
 
-
 ## Architecture
 
 ## Messages
 
 ### Client Messages
+
+| Message               | Description                                                            |
+| :-------------------- | :--------------------------------------------------------------------- |
+| `auth/login`          | Login request from the client                                          |
+| `auth/logout`         | Logout request from the client                                         |
+| `group/create`        | Create group request from the client                                   |
+| `group/edit`          | Edit group request from the client                                     |
+| `group/list`          | Request from the client to view available groups                       |
+| `group/view`          | Request from the client to view public details about a single group    |
+| `group/join`          | Request from the client to join a group                                |
+| `group/leave`         | Request from the client to leave a group                               |
+| `group/remove`        | Request from the client to remove a group                              |
+| `conversation/create` | Create conversation request from the client                            |
+| `conversation/edit`   | Edit conversation information request from the client                  |
+| `conversation/list`   | Request from the client to list available conversations within a group |
+| `conversation/remove` | Request from the client to remove a conversation                       |
+| `message/create`      | Create message request from the client (new message post)              |
+| `message/edit`        | Edit message request from the client                                   |
+| `message/remove`      | Remove message request from the client                                 |
+| `system/type-start`   | System notification that the client has detected typing                |
+| `system/type-end`     | System notification that the client has detected a stop to typing      |
+| `system/status`       | System notification about the status of the client                     |
 
 ### Server Messages
